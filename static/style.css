@@ -1,0 +1,297 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* General Styles */
+body {
+    font-family: poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #ffffff;
+    padding: 0px;
+    color: rgb(5, 5, 5);
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Side (Logo + Company Name) */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;  /* Small logo size */
+    height: 40px;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navbar Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #640871;  /* Hover Color */
+}
+
+/* Mobile Menu (Hamburger) */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 200px 20px;
+    background: linear-gradient(to right, #000, #6a1e6c);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 7px 25px;
+    font-size: 1rem;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    border-radius: 27px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #f0a500;
+}
+
+/* Scrollable Section */
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;  /* Allows manual horizontal scrolling */
+    white-space: nowrap;
+    padding: 20px 0;
+    background: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+/* Styling for Scrollable Content */
+.scroll-content {
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+/* Bigger Blocks */
+.scroll-item {
+    width: 400px;  /* Increased size */
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;  /* Prevents shrinking */
+}
+
+/* Image Styling */
+.scroll-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hide Scrollbar for a Clean Look */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Work Game Section */
+.work-game-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.work-game-heading {
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #6a1e6c;
+}
+
+/* Work Game Features Section */
+.work-game-features {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    background: #f8f9fa;
+}
+
+.features-left {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.feature-item {
+    margin-bottom: 20px;
+}
+
+.feature-item h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 500px;
+}
+
+/* Work Game Features Section */
+.work-game-features {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    background: #f8f9fa;
+}
+
+.features-left {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.feature-item h2 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #666;
+    max-width: 500px;
+}
+
+/* Work Game Features Section */
+.work-game-features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+    background: #f8f9fa;
+}
+
+/* Left Side with Text & Icons */
+.features-left {
+    width: 50%;
+    padding-left: 50px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* Right Side Image */
+.features-right {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-image {
+    max-width: 100%;
+    border-radius: 100px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+
