@@ -1,148 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Freelance Carousel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-  </head>
-  <body class="bg-white text-black">
-    <div class="max-w-6xl mx-auto px-4 py-10 sm:py-16">
-      <h2 class="text-3xl sm:text-4xl font-semibold text-center text-purple-800 mb-6 sm:mb-10">
-        Brands Trust Freelance
-      </h2>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Freelance Carousel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hide default scrollbar */
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <div class="max-w-7xl mx-auto px-6 py-12 sm:py-16">
+    <h2 class="text-center text-purple-800 font-bold text-3xl sm:text-4xl md:text-5xl mb-8 sm:mb-12">
+      Brands Trust Freelance
+    </h2>
 
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div
-            class="swiper-slide bg-gradient-to-br from-purple-900 to-black text-white rounded-3xl p-10 sm:p-14 lg:p-20 shadow-lg min-h-[60vh] sm:min-h-[70vh] flex flex-col justify-center"
-          >
-            <div>
-              <div class="flex items-center gap-3 mb-4">
-                <img
-                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png"
-                  class="w-8 sm:w-10 h-8 sm:h-10"
-                  alt="Facebook"
-                />
-              </div>
-              <p class="text-base sm:text-lg">
-                Connect with the top IT professionals and collaborate
-                seamlessly. Find expert talent, build teams, and drive
-                innovation—all in one place.
-              </p>
-              <ul class="mt-4 space-y-3">
-                <li class="flex items-center">
-                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
-                  <b class="mx-2 text-lg sm:text-xl">Access top-tier talent</b>
-                  <span class="text-sm sm:text-base font-light"
-                    > - Find skilled professionals across software development,
-                    data science, cybersecurity, and more.</span
-                  >
-                </li>
-                <li class="flex items-center">
-                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
-                  <b class="mx-2 text-lg sm:text-xl">Seamless collaboration</b>
-                  <span class="text-sm sm:text-base"
-                    > - Communicate, form teams, and manage projects
-                    efficiently.</span
-                  >
-                </li>
-                <li class="flex items-center">
-                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
-                  <b class="mx-2 text-lg sm:text-xl">End-to-end support</b>
-                  <span class="text-sm sm:text-base"
-                    > - Get guidance, tools, and a secure platform to ensure
-                    smooth project execution.</span
-                  >
-                </li>
-              </ul>
+    <div class="relative">
+      <div class="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide space-x-6 px-4 sm:px-8 md:px-12">
+        
+        <!-- Slide 1 -->
+        <div class="flex-shrink-0 snap-center w-[90%] sm:w-[75%] md:w-[80%] bg-gradient-to-br from-purple-900 to-black text-white rounded-3xl p-8 sm:p-12 lg:p-16 shadow-xl">
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" class="w-12 sm:w-14 h-12 sm:h-14" alt="Facebook" />
             </div>
-            <div class="mt-6 sm:mt-10 flex justify-center">
-              <a
-                href="#"
-                class="block w-full sm:w-[70%] md:w-[50%] text-center bg-white text-black font-semibold py-3 rounded-full"
-              >
-                Let's hire top talents
-              </a>
-            </div>
+            <p class="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed">
+              Connect with top IT professionals and collaborate seamlessly.  
+              <br>Find expert talent, build teams, and drive innovation—all in one place.
+            </p>
+            <ul class="mt-6 space-y-4">
+              <li class="flex items-start">
+                <span class="text-green-400 text-2xl sm:text-3xl">✔</span>
+                <div class="ml-3">
+                  <b class="text-lg sm:text-xl font-semibold">Access top-tier talent</b>
+                  <p class="text-sm sm:text-base text-gray-300">Find skilled professionals in software development, data science, cybersecurity, and more.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 text-2xl sm:text-3xl">✔</span>
+                <div class="ml-3">
+                  <b class="text-lg sm:text-xl font-semibold">Seamless collaboration</b>
+                  <p class="text-sm sm:text-base text-gray-300">Communicate, form teams, and manage projects efficiently.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 text-2xl sm:text-3xl">✔</span>
+                <div class="ml-3">
+                  <b class="text-lg sm:text-xl font-semibold">End-to-end support</b>
+                  <p class="text-sm sm:text-base text-gray-300">Get expert guidance, secure tools, and smooth project execution.</p>
+                </div>
+              </li>
+            </ul>
           </div>
-
-          <!-- Slide 2 -->
-          <div
-            class="swiper-slide bg-gradient-to-br from-purple-900 to-black text-white rounded-3xl p-10 sm:p-14 lg:p-20 shadow-lg min-h-[60vh] sm:min-h-[70vh] flex flex-col justify-center"
-          >
-            <div>
-              <div class="flex items-center gap-3 mb-4">
-                <img
-                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png"
-                  class="w-8 sm:w-10 h-8 sm:h-10"
-                  alt="Facebook"
-                />
-              </div>
-              <p class="text-base sm:text-lg">
-                Connect with the top IT professionals and collaborate
-                seamlessly. Find expert talent, build teams, and drive
-                innovation—all in one place.
-              </p>
-              <ul class="mt-4 space-y-3">
-                <li class="flex items-center">
-                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
-                  <b class="mx-2 text-lg sm:text-xl">Access top-tier talent</b>
-                  <span class="text-sm sm:text-base font-light"
-                    > - Find skilled professionals across software development,
-                    data science, cybersecurity, and more.</span
-                  >
-                </li>
-                <li class="flex items-center">
-                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
-                  <b class="mx-2 text-lg sm:text-xl">Seamless collaboration</b>
-                  <span class="text-sm sm:text-base"
-                    > - Communicate, form teams, and manage projects
-                    efficiently.</span
-                  >
-                </li>
-                <li class="flex items-center">
-                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
-                  <b class="mx-2 text-lg sm:text-xl">End-to-end support</b>
-                  <span class="text-sm sm:text-base"
-                    > - Get guidance, tools, and a secure platform to ensure
-                    smooth project execution.</span
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="mt-6 sm:mt-10 flex justify-center">
-              <a
-                href="#"
-                class="block w-full sm:w-[70%] md:w-[50%] text-center bg-white text-black font-semibold py-3 rounded-full"
-              >
-                Let's hire top talents
-              </a>
-            </div>
+          <div class="mt-8 sm:mt-12 flex justify-center">
+            <a href="#" class="block w-full sm:w-[70%] md:w-[50%] text-center bg-white text-black font-bold text-lg py-3 rounded-full transition hover:bg-gray-200">
+              Hire Top Talent
+            </a>
           </div>
         </div>
 
-        <!-- Pagination Dots -->
-        <div class="swiper-pagination mt-6"></div>
+        <!-- Slide 2 -->
+        <div class="flex-shrink-0 snap-center w-[90%] sm:w-[75%] md:w-[80%] bg-gradient-to-br from-purple-900 to-black text-white rounded-3xl p-8 sm:p-12 lg:p-16 shadow-xl">
+          <div>
+            <div class="flex items-center gap-4 mb-6">
+              <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" class="w-12 sm:w-14 h-12 sm:h-14" alt="Facebook" />
+            </div>
+            <p class="text-lg sm:text-xl md:text-2xl font-medium leading-relaxed">
+              Connect with top IT professionals and collaborate seamlessly.  
+              <br>Find expert talent, build teams, and drive innovation—all in one place.
+            </p>
+            <ul class="mt-6 space-y-4">
+              <li class="flex items-start">
+                <span class="text-green-400 text-2xl sm:text-3xl">✔</span>
+                <div class="ml-3">
+                  <b class="text-lg sm:text-xl font-semibold">Access top-tier talent</b>
+                  <p class="text-sm sm:text-base text-gray-300">Find skilled professionals in software development, data science, cybersecurity, and more.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 text-2xl sm:text-3xl">✔</span>
+                <div class="ml-3">
+                  <b class="text-lg sm:text-xl font-semibold">Seamless collaboration</b>
+                  <p class="text-sm sm:text-base text-gray-300">Communicate, form teams, and manage projects efficiently.</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-400 text-2xl sm:text-3xl">✔</span>
+                <div class="ml-3">
+                  <b class="text-lg sm:text-xl font-semibold">End-to-end support</b>
+                  <p class="text-sm sm:text-base text-gray-300">Get expert guidance, secure tools, and smooth project execution.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="mt-8 sm:mt-12 flex justify-center">
+            <a href="#" class="block w-full sm:w-[70%] md:w-[50%] text-center bg-white text-black font-bold text-lg py-3 rounded-full transition hover:bg-gray-200">
+              Hire Top Talent
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    </script>
-  </body>
+  </div>
+</body>
 </html>

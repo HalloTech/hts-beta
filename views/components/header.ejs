@@ -10,43 +10,73 @@
     <!-- Navigation Bar -->
     <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
         <nav class="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto">
-            <!-- Left Side: Logo & Name -->
-            <div class="flex items-center">
-                <img src="https://storage.googleapis.com/a1aa/image/Tm-BMWDgytiDt0LsYEdSUqZfwTU_dCio10VimDeA3Z4.jpg" alt="Logo" class="w-10 h-10 mr-3">
-                <span class="text-xl font-bold text-gray-800">HalloTech</span>
+            <!-- Mobile Menu Toggle (Left Side for Small Screens) -->
+            <div class="text-3xl cursor-pointer md:hidden" id="menu-toggle">
+                &#9776;
             </div>
 
-            <!-- Navigation Links -->
+            <!-- Left Side: Logo & Name (Centered on Mobile, Left on Desktop) -->
+            <div class="md:flex md:items-center md:space-x-3 md:relative absolute left-1/2 transform -translate-x-1/2 md:left-0 md:translate-x-0">
+                <img src="/images/logo/skynux-logo.png" alt="Logo" class="w-28 h-12 object-cover"> 
+            </div>
+            
+
+            <!-- Navigation Links (Visible on Desktop) -->
             <ul class="hidden md:flex space-x-6">
                 <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Home</a></li>
-                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Support</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Post Jobs</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Browse Projects</a></li>
                 <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">HTS Source</a></li>
-                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Industries</a></li>
-                <li><a href="/login" class="bg-purple-950 text-white py-2.5 px-6 rounded-full text-lg  hover:bg-purple-800 transition duration-300">Login</a></li>
+                <li>
+                    <a href="/login" class="bg-purple-950 text-white py-1.5 px-6 rounded-full text-lg hover:bg-purple-800 transition duration-300">
+                        Login/Signup
+                    </a>
+                </li>
             </ul>
 
-            <!-- Mobile Menu Toggle -->
-            <div class="md:hidden text-3xl cursor-pointer" id="menu-toggle">
-                &#9776;
+            <!-- Mobile Login Button (Right Side for Small Screens) -->
+            <div class="ml-auto md:hidden">
+                <a href="/login" class="bg-purple-950 text-white py-2 px-4 rounded-full text-lg hover:bg-purple-800 transition duration-300">Login</a>
             </div>
         </nav>
 
-        <!-- Mobile Navigation -->
-        <ul class="hidden flex-col items-center bg-white shadow-md absolute w-full left-0 top-16 py-4 space-y-4 md:hidden" id="mobile-menu">
-            <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Home</a></li>
-            <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Support</a></li>
-            <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">HTS Source</a></li>
-            <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Industries</a></li>
-            <li><a href="/login" class="bg-purple-950 text-white py-2.5 px-6 rounded-full text-lg font-semibold hover:bg-purple-800 transition duration-300">Login</a></li>
-        </ul>
+        <!-- Mobile Navigation (Sliding Menu) -->
+        <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 md:hidden">
+            <div class="p-6">
+                <button id="close-menu" class="text-3xl mb-4 cursor-pointer">&times;</button>
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Home</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Post Jobs</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Browse Projects</a></li>
+                    <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">HTS Source</a></li>
+                    <li>
+                        <a href="/login" class="block bg-purple-950 text-white py-1.5 text-center rounded-full text-lg font-semibold hover:bg-purple-800 transition duration-300">
+                            Login/Signup
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
 
         menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.remove('-translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('-translate-x-full');
+        });
+
+        // Close menu when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                mobileMenu.classList.add('-translate-x-full');
+            }
         });
     </script>
 </body>
