@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTS Freelance Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <nav class="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto">
+            <!-- Left Side: Logo & Name -->
+            <div class="flex items-center">
+                <img src="/logo.png" alt="Logo" class="w-10 h-10 mr-3">
+                <span class="text-xl font-bold text-gray-800">HalloTech</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Home</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Support</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">HTS Source</a></li>
+                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Industries</a></li>
+                <li><a href="/login" class="bg-purple-950 text-white py-2.5 px-6 rounded-full text-lg  hover:bg-purple-800 transition duration-300">Login</a></li>
+            </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden text-3xl cursor-pointer" id="menu-toggle">
+                &#9776;
+            </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <ul class="hidden flex-col items-center bg-white shadow-md absolute w-full left-0 top-16 py-4 space-y-4 md:hidden" id="mobile-menu">
+            <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Home</a></li>
+            <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Support</a></li>
+            <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">HTS Source</a></li>
+            <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Industries</a></li>
+            <li><a href="/login" class="bg-purple-950 text-white py-2.5 px-6 rounded-full text-lg font-semibold hover:bg-purple-800 transition duration-300">Login</a></li>
+        </ul>
+    </header>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

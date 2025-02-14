@@ -1,0 +1,47 @@
+<section class="w-full overflow-x-auto whitespace-nowrap py-5 bg-gray-100 scroll-smooth" id="scrollContainer">
+    <h2 class="text-2xl font-bold text-center mb-5">Latest Posts</h2>
+    <div class="flex gap-5 px-5">
+        <% let posts = [
+            { image: "HTS-2.jpg", name: "Amit Sharma", username: "@amit_dev" },
+            { image: "work-game-banner.jpg", name: "Priya Patel", username: "@priya_codes" },
+            { image: "HTS-4.jpg", name: "Rahul Verma", username: "@rahul_js" },
+            { image: "Deals.jpeg", name: "Sneha Kapoor", username: "@sneha_uiux" },
+            { image: "HTS-HOME2.jpg", name: "Vikram Singh", username: "@vikram_ai" },
+            { image: "work-game-banner.jpg", name: "Neha Srivastava", username: "@neha_stack" },
+            { image: "Deals.jpeg", name: "Siddharth Jain", username: "@sid_python" }
+        ]; %>
+
+        <% posts.forEach((post) => { %>
+            <div class="w-[320px] bg-white rounded-lg shadow-md overflow-hidden flex-shrink-0 p-4">
+                <div class="flex items-center gap-3">
+                    <img src="/images/" alt="Profile" class="w-10 h-10 rounded-full object-cover">
+                    <div>
+                        <h3 class="text-sm font-bold"><%= post.username %></h3>
+                        <p class="text-xs text-gray-500"><%= post.name %> | Full Stack Developer</p>
+                    </div>
+                </div>
+
+                <div class="w-full flex justify-center my-3">
+                    <img src="/images/<%= post.image %>" alt="Post" class="max-w-full max-h-60 object-contain rounded-md">
+                </div>
+
+                <h2 class="text-md font-bold">How To do bug fixing?</h2>
+                <p class="text-sm text-gray-500">Read More..</p>
+
+                <div class="flex justify-between items-center mt-3">
+                    <button class="text-purple-600 flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </button>
+
+                    <button class="text-purple-600 flex items-center gap-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 9l3 3m0 0l-3 3m3-3H7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</section>

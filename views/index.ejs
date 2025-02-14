@@ -7,81 +7,34 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav>
-            <div class="nav-left">
-                <img src="/logo.png" alt="Logo" class="logo">
-                <span class="company-name">HalloTech</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Support</a></li>
-                <li><a href="#">HTS Source</a></li>
-                <li><a href="#">Industries</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-            <div class="menu-toggle">&#9776;</div>
-        </nav>
-    </header>
+   
+       <!-- Include Header -->
+       <%- include('components/header') %>
+
 
     <!-- Hero Section -->
-    <section class="hero">
-        <h1>Empower Your Freelance Journey.</h1>
-        <p>Find expert talent, build teams, and drive innovation—all in one place.</p>
-        <a href="/login" class="btn">Get Started</a>
-    </section>
+        <%- include('components/hero') %>
+
+
+        <%- include('components/postSlider') %>
+    
 
     <!-- Scrolling Section -->
-    <section class="scroll-container">
-        <div class="scroll-content" id="scrollContainer">
-            <% let images = ["HTS-2.jpg", "work-game-banner.jpg", "HTS-4.jpg", "Deals.jpeg", "HTS-HOME2.jpg", "work-game-banner.jpg", "Deals.jpeg"]; %>
-        </div>
-    </section>
+    
 
-    <script>
-        let images = <%- JSON.stringify(images) %>; 
-        let container = document.getElementById("scrollContainer");
 
-        images.forEach(image => {
-            let div = document.createElement("div");
-            div.classList.add("scroll-item");
-            div.innerHTML = `<img src="/images/${image}" alt="Post">`;
-            container.appendChild(div);
-        });
-    </script>
+    <%- include('components/brandSlider') %>
 
-    <!-- Work Game Section -->
-    <section class="work-game-section">
-        <h1 class="work-game-heading" style="font-size: xxx-large;">Up your work game, it’s easy</h1>
-    </section>
 
-    <!-- Work Game Features Section -->
-    <section class="work-game-features">
-        <div class="features-left">
-            <% let features = [
-                { icon: "join.png", title: "No cost to join", desc: "Register and browse talent profiles, explore projects, or even book a consultation." },
-                { icon: "hire.png", title: "Post a job and hire top talent", desc: "Finding talent doesn’t have to be a chore. Post a job or we can search for you!" },
-                { icon: "team.png", title: "Make your team", desc: "Assemble the perfect group of professionals for any project." },
-                { icon: "collaboration.png", title: "Collaboration", desc: "Easily communicate with your team, share files, and stay organized." },
-                { icon: "management.png", title: "Team Management", desc: "Stay on track with built-in tools and seamless project management." }
-            ]; %>
-            <% features.forEach(feature => { %>
-                <div class="feature-item">
-                    <img src="/icons/<%= feature.icon %>" class="feature-icon" alt="<%= feature.title %> Icon">
-                    <h2><%= feature.title %></h2>
-                    <p><%= feature.desc %></p>
-                </div>
-            <% }) %>
-        </div>
-        <div class="features-right">
-            <img src="/images/work-game-banner.jpg" class="feature-image" alt="Work Game Banner">
-        </div>
-    </section>
+    <%- include('components/findTalents') %>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 HTS Hallotech. All rights reserved.</p>
-    </footer>
+
+    <%- include('components/workGameSection') %>
+    
+    
+    <%- include('components/browseJob') %>
+    <%- include('components/freelanceLeader') %>
+    <%- include('components/footer') %>
+
 </body>
 </html>

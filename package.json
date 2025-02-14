@@ -25,6 +25,8 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.0.6",
+    "@tailwindcss/postcss": "^4.0.6",
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "ejs": "^3.1.10",
@@ -35,5 +37,10 @@
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
     "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^4.0.6"
   }
 }

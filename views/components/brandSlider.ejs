@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelance Carousel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body class="bg-white text-black">
+    <div class="max-w-6xl mx-auto px-4 py-10 sm:py-16">
+      <h2 class="text-3xl sm:text-4xl font-semibold text-center text-purple-800 mb-6 sm:mb-10">
+        Brands Trust Freelance
+      </h2>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div
+            class="swiper-slide bg-gradient-to-br from-purple-900 to-black text-white rounded-3xl p-10 sm:p-14 lg:p-20 shadow-lg min-h-[60vh] sm:min-h-[70vh] flex flex-col justify-center"
+          >
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png"
+                  class="w-8 sm:w-10 h-8 sm:h-10"
+                  alt="Facebook"
+                />
+              </div>
+              <p class="text-base sm:text-lg">
+                Connect with the top IT professionals and collaborate
+                seamlessly. Find expert talent, build teams, and drive
+                innovation—all in one place.
+              </p>
+              <ul class="mt-4 space-y-3">
+                <li class="flex items-center">
+                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
+                  <b class="mx-2 text-lg sm:text-xl">Access top-tier talent</b>
+                  <span class="text-sm sm:text-base font-light"
+                    > - Find skilled professionals across software development,
+                    data science, cybersecurity, and more.</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
+                  <b class="mx-2 text-lg sm:text-xl">Seamless collaboration</b>
+                  <span class="text-sm sm:text-base"
+                    > - Communicate, form teams, and manage projects
+                    efficiently.</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
+                  <b class="mx-2 text-lg sm:text-xl">End-to-end support</b>
+                  <span class="text-sm sm:text-base"
+                    > - Get guidance, tools, and a secure platform to ensure
+                    smooth project execution.</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 sm:mt-10 flex justify-center">
+              <a
+                href="#"
+                class="block w-full sm:w-[70%] md:w-[50%] text-center bg-white text-black font-semibold py-3 rounded-full"
+              >
+                Let's hire top talents
+              </a>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div
+            class="swiper-slide bg-gradient-to-br from-purple-900 to-black text-white rounded-3xl p-10 sm:p-14 lg:p-20 shadow-lg min-h-[60vh] sm:min-h-[70vh] flex flex-col justify-center"
+          >
+            <div>
+              <div class="flex items-center gap-3 mb-4">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png"
+                  class="w-8 sm:w-10 h-8 sm:h-10"
+                  alt="Facebook"
+                />
+              </div>
+              <p class="text-base sm:text-lg">
+                Connect with the top IT professionals and collaborate
+                seamlessly. Find expert talent, build teams, and drive
+                innovation—all in one place.
+              </p>
+              <ul class="mt-4 space-y-3">
+                <li class="flex items-center">
+                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
+                  <b class="mx-2 text-lg sm:text-xl">Access top-tier talent</b>
+                  <span class="text-sm sm:text-base font-light"
+                    > - Find skilled professionals across software development,
+                    data science, cybersecurity, and more.</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
+                  <b class="mx-2 text-lg sm:text-xl">Seamless collaboration</b>
+                  <span class="text-sm sm:text-base"
+                    > - Communicate, form teams, and manage projects
+                    efficiently.</span
+                  >
+                </li>
+                <li class="flex items-center">
+                  <span class="text-green-400 text-lg sm:text-xl">✔</span>
+                  <b class="mx-2 text-lg sm:text-xl">End-to-end support</b>
+                  <span class="text-sm sm:text-base"
+                    > - Get guidance, tools, and a secure platform to ensure
+                    smooth project execution.</span
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="mt-6 sm:mt-10 flex justify-center">
+              <a
+                href="#"
+                class="block w-full sm:w-[70%] md:w-[50%] text-center bg-white text-black font-semibold py-3 rounded-full"
+              >
+                Let's hire top talents
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>

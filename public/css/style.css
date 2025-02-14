@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* General Styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
@@ -10,132 +12,7 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Header & Navigation */
-header {
-    background-color: #ffffff;
-    padding: 0px;
-    color: rgb(5, 5, 5);
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-/* Left Side (Logo + Company Name) */
-.nav-left {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 40px;  /* Small logo size */
-    height: 40px;
-    margin-right: 10px;
-}
-
-.company-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    font-family: 'Poppins', sans-serif;
-}
-
-
-/* Navbar Links */
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #640871;  /* Hover Color */
-}
-
-/* Mobile Menu (Hamburger) */
-.menu-toggle {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        padding: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 200px 20px;
-    background: linear-gradient(to right, #000, #6a1e6c);
-    color: white;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-}
-
-.hero .btn {
-    padding: 7px 25px;
-    font-size: 1rem;
-    background-color: #000;
-    color: white;
-    text-decoration: none;
-    border-radius: 27px;
-    transition: 0.3s;
-}
-
-.hero .btn:hover {
-    background-color: #f0a500;
-}
 
 /* Scrollable Section */
 .scroll-container {
