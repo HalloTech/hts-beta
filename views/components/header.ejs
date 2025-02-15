@@ -1,83 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTS Freelance Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
+  </head>
+  <body class="bg-gray-100">
     <!-- Navigation Bar -->
     <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-        <nav class="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto">
-            <!-- Mobile Menu Toggle (Left Side for Small Screens) -->
-            <div class="text-3xl cursor-pointer md:hidden" id="menu-toggle">
-                &#9776;
-            </div>
-
-            <!-- Left Side: Logo & Name (Centered on Mobile, Left on Desktop) -->
-            <div class="md:flex md:items-center md:space-x-3 md:relative absolute left-1/2 transform -translate-x-1/2 md:left-0 md:translate-x-0">
-                <img src="/images/logo/skynux-logo.png" alt="Logo" class="w-28 h-12 object-cover"> 
-            </div>
-            
-
-            <!-- Navigation Links (Visible on Desktop) -->
-            <ul class="hidden md:flex space-x-6">
-                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Home</a></li>
-                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Post Jobs</a></li>
-                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Browse Projects</a></li>
-                <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">HTS Source</a></li>
-                <li>
-                    <a href="/login" class="bg-purple-950 text-white py-1.5 px-6 rounded-full text-lg hover:bg-purple-800 transition duration-300">
-                        Login/Signup
-                    </a>
-                </li>
-            </ul>
-
-            <!-- Mobile Login Button (Right Side for Small Screens) -->
-            <div class="ml-auto md:hidden">
-                <a href="/login" class="bg-purple-950 text-white py-2 px-4 rounded-full text-lg hover:bg-purple-800 transition duration-300">Login</a>
-            </div>
-        </nav>
-
-        <!-- Mobile Navigation (Sliding Menu) -->
-        <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 md:hidden">
-            <div class="p-6">
-                <button id="close-menu" class="text-3xl mb-4 cursor-pointer">&times;</button>
-                <ul class="space-y-4">
-                    <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Home</a></li>
-                    <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Post Jobs</a></li>
-                    <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">Browse Projects</a></li>
-                    <li><a href="#" class="text-gray-800 hover:text-purple-700 transition">HTS Source</a></li>
-                    <li>
-                        <a href="/login" class="block bg-purple-950 text-white py-1.5 text-center rounded-full text-lg font-semibold hover:bg-purple-800 transition duration-300">
-                            Login/Signup
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <nav
+        class="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto"
+      >
+        <!-- Mobile Menu Toggle (Left Side for Small Screens) -->
+        <div class="text-3xl cursor-pointer md:hidden" id="menu-toggle">
+          &#9776;
         </div>
+
+        <!-- Left Side: Logo & Name (Centered on Mobile, Left on Desktop) -->
+        <div
+          class="md:flex md:items-center md:space-x-3 md:relative absolute left-1/2 transform -translate-x-1/2 md:left-0 md:translate-x-0"
+        >
+          <img
+            src="/images/logo/skynux-logo.png"
+            alt="Logo"
+            class="w-28 h-12 object-cover"
+          />
+        </div>
+
+        <!-- Search Bar (Visible on Large Screens) -->
+        <div class="hidden md:flex flex-1 justify-center">
+          <input
+            type="text"
+            placeholder="Search for jobs, projects..."
+            class="w-72 px-3 py-2 border border-black rounded-full outline-none"
+          />
+        </div>
+
+        <!-- Navigation Links (Visible on Desktop) -->
+        <ul class="hidden md:flex space-x-6">
+          <li>
+            <a href="#" class="text-gray-800 hover:text-purple-700 transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-800 hover:text-purple-700 transition"
+              >Post Jobs</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-800 hover:text-purple-700 transition"
+              >Browse Projects</a
+            >
+          </li>
+          <li>
+            <a href="#" class="text-gray-800 hover:text-purple-700 transition"
+              >HTS Source</a
+            >
+          </li>
+          <li>
+            <a
+              href="/login"
+              class="bg-purple-950 text-white py-1.5 px-6 rounded-full text-[15px] font-light hover:bg-purple-800 transition duration-300"
+            >
+              Login/Signup
+            </a>
+          </li>
+        </ul>
+
+        <!-- Mobile Login Button (Right Side for Small Screens) -->
+        <div class="ml-auto md:hidden">
+          <a
+            href="/login"
+            class="bg-purple-950 text-white py-2 px-4 rounded-full text-[15px] hover:bg-purple-800 transition duration-300"
+            >Login</a
+          >
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation (Sliding Menu) -->
+      <div
+        id="mobile-menu"
+        class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 md:hidden"
+      >
+        <div class="p-6">
+          <button id="close-menu" class="text-3xl mb-4 cursor-pointer">
+            &times;
+          </button>
+          <ul class="space-y-4">
+            <li>
+              <a href="#" class="text-gray-800 hover:text-purple-700 transition"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-800 hover:text-purple-700 transition"
+                >Post Jobs</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-800 hover:text-purple-700 transition"
+                >Browse Projects</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-800 hover:text-purple-700 transition"
+                >HTS Source</a
+              >
+            </li>
+            <li>
+              <a
+                href="/login"
+                class="block bg-purple-950 text-white py-1.5 text-center rounded-full text-md font-light hover:bg-purple-800 transition duration-300"
+              >
+                Login/Signup
+              </a>
+            </li>
+          </ul>
+          <!-- Search Bar at Bottom of Mobile Menu -->
+          <div class="mt-6">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full px-3 py-2 border border-black rounded-full outline-none"
+            />
+          </div>
+        </div>
+      </div>
     </header>
 
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMenu = document.getElementById('close-menu');
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeMenu = document.getElementById("close-menu");
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.remove('-translate-x-full');
-        });
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.remove("-translate-x-full");
+      });
 
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('-translate-x-full');
-        });
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-x-full");
+      });
 
-        // Close menu when clicking outside
-        window.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                mobileMenu.classList.add('-translate-x-full');
-            }
-        });
+      // Close menu when clicking outside
+      window.addEventListener("click", (e) => {
+        if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          mobileMenu.classList.add("-translate-x-full");
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
