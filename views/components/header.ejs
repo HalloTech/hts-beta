@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HTS Freelance Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body class="bg-gray-100">
     <!-- Navigation Bar -->
@@ -84,11 +85,14 @@
         id="mobile-menu"
         class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 md:hidden"
       >
-        <div class="p-6">
-          <button id="close-menu" class="text-3xl mb-4 cursor-pointer">
+        <div class="p-6 flex flex-col h-full">
+          <!-- Close Button -->
+          <button id="close-menu" class="text-3xl mb-4 cursor-pointer text-right">
             &times;
           </button>
-          <ul class="space-y-4">
+
+          <!-- Navigation Links -->
+          <ul class="space-y-4 flex-grow">
             <li>
               <a href="#" class="text-gray-800 hover:text-purple-700 transition"
                 >Home</a
@@ -117,14 +121,44 @@
                 Login/Signup
               </a>
             </li>
+         <li>
+             <!-- Search Bar -->
+             <div class="mt-6">
+              <input
+                type="text"
+                placeholder="Search..."
+                class="w-full px-3 py-2 border border-black rounded-full outline-none"
+              />
+            </div>
+         </li>
           </ul>
-          <!-- Search Bar at Bottom of Mobile Menu -->
-          <div class="mt-6">
-            <input
-              type="text"
-              placeholder="Search..."
-              class="w-full px-3 py-2 border border-black rounded-full outline-none"
-            />
+          
+
+          <!-- Social Icons & Copyright -->
+          <div class="mt-8 text-center">
+            <div class="flex justify-center gap-4 mb-4">
+              <!-- LinkedIn -->
+              <a href="#" class="text-gray-700 hover:text-blue-600 transition">
+                <i class="fab fa-linkedin text-2xl"></i>
+              </a>
+              <!-- Twitter/X -->
+              <a href="#" class="text-gray-700 hover:text-blue-500 transition">
+                <i class="fab fa-twitter text-2xl"></i>
+              </a>
+              <!-- Instagram -->
+              <a href="#" class="text-gray-700 hover:text-pink-500 transition">
+                <i class="fab fa-instagram text-2xl"></i>
+              </a>
+              <!-- GitHub -->
+              <a href="#" class="text-gray-700 hover:text-gray-900 transition">
+                <i class="fab fa-github text-2xl"></i>
+              </a>
+            </div>
+
+            <!-- Copyright -->
+            <p class="text-xs text-gray-600">
+              &copy; 2025 HalloTech Solutions. All rights reserved. → Skynux
+            </p>
           </div>
         </div>
       </div>

@@ -9,9 +9,9 @@
       scrollbar-width: none; /* Hide scrollbar for Firefox */
     }
   </style>
-  
-  <section class="w-full overflow-x-auto whitespace-nowrap py-5 bg-gray-100 scroll-smooth scroll-hide" id="scrollContainer">
-      <h2 class="text-2xl font-bold text-left pl-5 mb-5">Latest Posts</h2>
+    <h2 class="text-2xl font-bold text-left pl-5  mt-3">Latest Posts</h2>  
+  <div class="w-full overflow-x-auto whitespace-nowrap py-5 bg-gray-100 scroll-smooth scroll-hide" id="scrollContainer">
+      
       <div class="flex gap-5 px-5">
           <% let posts = [
               { image: "HTS-2.jpg", name: "Amit Sharma", username: "@amit_dev", link: "#" },
@@ -24,7 +24,7 @@
           ]; %>
   
           <% posts.forEach((post) => { %>
-              <a href="<%= post.link %>" class="w-[320px] bg-white rounded-lg shadow-md overflow-hidden flex-shrink-0 p-4 transition-transform duration-200 hover:scale-105 cursor-pointer">
+              <a href="<%= post.link %>" class="w-[320px]  rounded-lg  overflow-hidden flex-shrink-0 p-4 transition-transform duration-200  cursor-pointer">
                   <div class="flex items-center gap-3">
                       <img src="/images/" alt="Profile" class="w-10 h-10 rounded-full object-cover">
                       <div>
@@ -77,5 +77,5 @@
               </a>
           <% }); %>
       </div>
-  </section>
+    </div>
   
