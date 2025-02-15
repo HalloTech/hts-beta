@@ -1,19 +1,19 @@
 <style>
-  /* Hide scrollbar but keep scroll functionality */
-  .scroll-hide::-webkit-scrollbar {
-      display: none; /* Chrome, Safari */
-  }
-
-  .scroll-hide {
-      -ms-overflow-style: none; /* IE, Edge */
-      scrollbar-width: none; /* Firefox */
-  }
-</style>
-
-<h2 class="text-2xl font-bold text-left pl-5 mt-3">Recent Jobs</h2>  
-
-<div class="w-full overflow-x-auto whitespace-nowrap py-5 bg-gray-100 scroll-smooth scroll-hide" id="scrollContainer">
-  <div class="flex flex-wrap md:flex-nowrap gap-5 px-5">
+    /* Hide scrollbar but keep scrolling */
+    .scroll-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scroll-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+  </style>
+  
+  <h2 class="text-2xl font-bold text-left pl-5 mt-3">Recent Jobs</h2>  
+  
+  <div class="w-full overflow-x-auto scroll-hide scroll-smooth bg-gray-100 py-5" id="scrollContainer">
+    <div class="flex flex-nowrap gap-5 px-5">
+      
       <% let posts = [
           { image: "HTS-2.jpg", name: "Amit Sharma", username: "@amit_dev", link: "#" },
           { image: "work-game-banner.jpg", name: "Priya Patel", username: "@priya_codes", link: "#" },
@@ -23,10 +23,10 @@
           { image: "work-game-banner.jpg", name: "Neha Srivastava", username: "@neha_stack", link: "#" },
           { image: "Deals.jpeg", name: "Siddharth Jain", username: "@sid_python", link: "#" }
       ]; %>
-
+  
       <% posts.forEach((post) => { %>
           <a href="<%= post.link %>" 
-             class="w-full sm:w-[500px] md:w-[600px] lg:w-[640px] min-w-[300px] rounded-lg overflow-hidden flex-shrink-0 p-4 transition-transform duration-200 cursor-pointer ">
+             class="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] min-w-[250px] rounded-lg overflow-hidden flex-shrink-0 p-4 transition-transform duration-300 cursor-pointer">
               
               <div class="flex items-center gap-3">
                   <img src="/images/" alt="Profile" class="w-10 h-10 rounded-full object-cover">
@@ -35,44 +35,32 @@
                       <p class="text-xs text-gray-500"><%= post.name %> | Full Stack Developer</p>
                   </div>
               </div>
-
-              <!-- Ensure Instagram-like image size -->
+  
+              <!-- Image -->
               <div class="w-full flex justify-center my-3">
                   <img src="/images/<%= post.image %>" alt="Post" 
                        class="w-full h-[300px] object-cover rounded-md">
               </div>
-
+  
               <h2 class="text-md font-bold">How To do bug fixing?</h2>
-
+  
               <div class="flex justify-between items-center mt-3">
-                  <!-- Left: Read More -->
                   <p class="text-sm text-gray-500">Read More..</p>
-
-                  <!-- Right: Like, Share, Save Icons -->
+  
                   <div class="flex gap-3 text-gray-600">
-                      <!-- Like Button -->
                       <button class="hover:text-red-500 transition duration-200">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-                          </svg>
+                          <i class="fas fa-heart"></i>
                       </button>
-
-                      <!-- Share Button -->
                       <button class="hover:text-blue-500 transition duration-200">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16M12 4l8 8-8 8" />
-                          </svg>
+                          <i class="fas fa-share"></i>
                       </button>
-
-                      <!-- Save Button -->
                       <button class="hover:text-green-500 transition duration-200">
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5v14l7-7 7 7V5z" />
-                          </svg>
+                          <i class="fas fa-bookmark"></i>
                       </button>
                   </div>
               </div>
           </a>
       <% }); %>
+    </div>
   </div>
-</div>
+  
