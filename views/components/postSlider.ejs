@@ -9,7 +9,7 @@
       scrollbar-width: none; /* Hide scrollbar for Firefox */
     }
   </style>
-    <h2 class="text-2xl font-bold text-left pl-5  mt-3">Latest Posts</h2>  
+    <h2 class="text-2xl font-bold text-left pl-9  mt-3">Latest Posts</h2>  
   <div class="w-full overflow-x-auto whitespace-nowrap py-5 bg-gray-100 scroll-smooth scroll-hide" id="scrollContainer">
       
       <div class="flex gap-5 px-5">
@@ -26,7 +26,7 @@
           <% posts.forEach((post) => { %>
               <a href="<%= post.link %>" class="w-[320px]  rounded-lg  overflow-hidden flex-shrink-0 p-4 transition-transform duration-200  cursor-pointer">
                   <div class="flex items-center gap-3">
-                      <img src="/images/" alt="Profile" class="w-10 h-10 rounded-full object-cover">
+                      <img src="/icons/man.png" alt="Profile" class="w-10 h-10 rounded-full object-cover">
                       <div>
                           <h3 class="text-sm font-bold"><%= post.username %></h3>
                           <p class="text-xs text-gray-500"><%= post.name %> | Full Stack Developer</p>
@@ -48,29 +48,16 @@
                   
                     <!-- Right: Like, Share, Save Icons -->
                     <div class="flex gap-3 text-gray-600">
-                      <!-- Like Button -->
                       <button class="hover:text-red-500 transition duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 15l7-7 7 7" />
-                        </svg>
-                      </button>
+                        <i class="fas fa-heart"></i>
+                    </button>
+                    <button class="hover:text-blue-500 transition duration-200">
+                        <i class="fas fa-share"></i>
+                    </button>
+                    <!-- <button class="hover:text-green-500 transition duration-200">
+                        <i class="fas fa-bookmark"></i>
+                    </button> -->
                   
-                      <!-- Share Button -->
-                      <button class="hover:text-blue-500 transition duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 12h16M12 4l8 8-8 8" />
-                        </svg>
-                      </button>
-                  
-                      <!-- Save Button -->
-                      <button class="hover:text-green-500 transition duration-200">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 5v14l7-7 7 7V5z" />
-                        </svg>
-                      </button>
                     </div>
                   </div>
                   

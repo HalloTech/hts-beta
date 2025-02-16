@@ -1,42 +1,108 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browse Talent by Category</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
 
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
+      body {
+        font-family: "Roboto", sans-serif;
+      }
     </style>
-</head>
-<body class="bg-white text-black">
+  </head>
+  <body class="bg-white text-black">
     <div class="container mx-auto px-4 py-8 mb-10">
-        <h1 class="text-5xl font-bold mb-4">Browse talent by category</h1>
-        <p class="text-xl mb-8">Looking for work? <a href="#" class="font-bold text-black">Browse jobs</a></p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Software Development</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Data Science & Analytics</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">DevOps & Automation</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Cloud Computing</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Cybersecurity</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Quality Assurance & Testing</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Software Development</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Data Science & Analytics</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">IT Support & Systems Administration</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Cloud Computing</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Cybersecurity</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Networking & Telecommunications</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Project Management & IT Consulting</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Game Development</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">UI/UX Design</div>
-            <div class="group bg-gradient-to-r from-purple-950 to-purple-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-purple-500 hover:to-purple-900">Blockchain & Cryptocurrency</div>
-          </div>
-          
-        <div class="h-0.5 bg-purple-800 mt-10"></div>
+      <h1 class="text-5xl font-bold mb-4">Find Top Talent by Category</h1>
+      <p class="text-xl mb-8">
+        Seeking Opportunities? 
+        <a href="#" class="font-bold text-black">Explore Jobs</a>
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Software Development
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Data Science & Analytics
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          DevOps & Automation
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Cloud Computing
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Cybersecurity
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Quality Assurance & Testing
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Software Development
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Data Science & Analytics
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          IT Support & Systems Administration
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Cloud Computing
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Cybersecurity
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Networking & Telecommunications
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Project Management & IT Consulting
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Game Development
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          UI/UX Design
+        </div>
+        <div
+          class="group bg-gradient-to-r from-violet-950 to-violet-500 cursor-pointer text-white p-4 rounded-md transition-all duration-700 ease-in-out transform hover:scale-105 hover:shadow-lg hover:from-violet-500 hover:to-violet-900"
+        >
+          Blockchain & Cryptocurrency
+        </div>
+      </div>
+
+      <div class="h-0.5 bg-violet-800 mt-10"></div>
     </div>
-   
-</body>
+  </body>
 </html>

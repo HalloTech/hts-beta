@@ -1,22 +1,28 @@
 <!-- Work Game Section -->
-<section class="text-center py-16 bg-white">
-    <h1 class="text-[5rem] sm:text-5xl font-normal text-purple-800 hover:scale-95 smooth duration-300">Up your work game, it’s easy</h1>
+<section class="text-center pt-16 pb-2 bg-white">
+    <h2 class="text-center text-violet-800 font-bold text-3xl sm:text-4xl md:text-5xl mb-5 sm:mb-12">
+        Level Up Your Freelance Career - Effortlessly
+      </h2>
+  
 </section>
 
+<!-- Work Game Features Section -->
 <!-- Work Game Features Section -->
 <section class="flex flex-col lg:flex-row items-center justify-between px-6 sm:px-12 py-16 bg-gray-100 container mx-auto ">
     <!-- Left Side: Features List -->
     <div class="w-full lg:w-1/2 space-y-6">
         <% let features = [
-            { icon: "join.png", title: "No cost to join", desc: "Register and browse talent profiles, explore projects, or even book a consultation." },
-            { icon: "hire.png", title: "Post a job and hire top talent", desc: "Finding talent doesn’t have to be a chore. Post a job or we can search for you!" },
-            { icon: "team.png", title: "Make your team", desc: "Assemble the perfect group of professionals for any project." },
-            { icon: "collaboration.png", title: "Collaboration", desc: "Easily communicate with your team, share files, and stay organized." },
-            { icon: "management.png", title: "Team Management", desc: "Stay on track with built-in tools and seamless project management." }
-        ]; %>
+        { icon: "fa-user-plus", title: "No cost to join", desc: "Register and browse talent profiles, explore projects, or even book a consultation." },
+        { icon: "fa-briefcase", title: "Post a job and hire top talent", desc: "Finding talent doesn’t have to be a chore. Post a job or we can search for you!" },
+        { icon: "fa-users", title: "Make your team", desc: "Assemble the perfect group of professionals for any project." },
+        { icon: "fa-handshake", title: "Collaboration", desc: "Easily communicate with your team, share files, and stay organized." },
+        { icon: "fa-tasks", title: "Team Management", desc: "Stay on track with built-in tools and seamless project management." }
+    ];
+     %>
         <% features.forEach(feature => { %>
             <div class="flex items-center gap-4">
-                <img src="/icons/<%= feature.icon %>" class="w-12 h-12" alt="<%= feature.title %> Icon">
+                <!-- Corrected Font Awesome icon usage -->
+                <i class="fas <%= feature.icon %> text-4xl text-violet-700"></i>
                 <div>
                     <h2 class="text-2xl font-semibold text-gray-800"><%= feature.title %></h2>
                     <p class="text-gray-600 text-base"><%= feature.desc %></p>
@@ -27,6 +33,6 @@
 
     <!-- Right Side: Image -->
     <div class="w-full lg:w-2/5 flex justify-center mt-10 lg:mt-0">
-        <img src="/images/work-game-banner.jpg" class="max-w-full rounded-[5rem] shadow-lg " alt="Work Game Banner">
+        <img src="/images/work-section.jpg" class="max-w-full rounded-[5rem] shadow-lg " alt="Work Game Banner">
     </div>
 </section>
